@@ -14,7 +14,7 @@ And then include the service provider within `app/config/app.php`. (Skip this st
 
 ```php
 'providers' => [
-    Kesty\LaravelNotifier\ServiceProvider::class
+    Kesty\LaravelNotifier\NotifierServiceProvider::class
 ];
 ```
 

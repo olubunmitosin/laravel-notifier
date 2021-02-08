@@ -27,7 +27,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Kesty\\LaravelNotifier\\ServiceProvider"
+                "Kesty\\LaravelNotifier\\NotifierServiceProvider"
             ],
             "aliases": {
                 "KestyNotify": "Kesty\\LaravelNotifier\\Facade"

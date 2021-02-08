@@ -3,7 +3,7 @@
 namespace Kesty\LaravelNotifier;
 
 
-class ServiceProvider extends \Illuminate\Support\ServiceProvider {
+class NotifierServiceProvider extends \Illuminate\Support\ServiceProvider {
 
     /**
      * Indicates if loading of the provider is deferred.
@@ -28,7 +28,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider {
         ], 'views');
 
         $this->publishes([
-            __DIR__.'/../assets' => public_path('vendor/laravel-notifiers'),
+            __DIR__.'/../assets' => public_path('vendor/laravel-notifier'),
         ], 'public');
 
         $this->loadViewsFrom(__DIR__ . '/../views', 'laravel-notifier');
