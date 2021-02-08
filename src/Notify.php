@@ -44,7 +44,7 @@ class Notify {
     {
         $this->levels = config('laravel-notifier.levels');
         $this->positions = config('laravel-notifier.positions');
-        $this->position = config('laravel-notifiers.current-position');
+        $this->position = config('laravel-notifier.current-position');
     }
 
     /**
