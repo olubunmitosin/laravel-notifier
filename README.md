@@ -33,5 +33,5 @@ use Kesty\LaravelNotifier\KestyNotify;
 KestyNotify::message(title, body);
 
 // or as function
-KestyNotify()->message(title, body);
+KestyNotify(message, title);
 ````

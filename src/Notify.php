@@ -28,7 +28,7 @@ class Notify {
      */
     function __construct()
     {
-        $this->levels = config('laravel-notifiers.levels');
+        $this->levels = config('laravel-notifier.levels');
     }
 
     /**
