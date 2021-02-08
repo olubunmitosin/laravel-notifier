@@ -1,0 +1,38 @@
+{
+    "name": "kesty/laravel-notifier",
+    "description": "Simple notification widget for Laravel ^5.5",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Olubunmi Tosin",
+            "email": "olubunmivictor6@gmail.com",
+            "homepage": "http://teqpace.com/victor"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": "7.*",
+        "illuminate/config": "7.*",
+        "illuminate/database": "7.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kesty\\LaravelNotifier\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kesty\\LaravelNotifier\\ServiceProvider"
+            ],
+            "aliases": {
+                "KestyNotify": "Kesty\\LaravelNotifier\\Facade"
+            }
+        }
+    }
+}
