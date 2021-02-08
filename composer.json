@@ -1,6 +1,6 @@
 {
     "name": "kesty/laravel-notifier",
-    "description": "Simple notification widget for Laravel ^5.5",
+    "description": "Simple notification widget for Laravel ^7.0",
     "type": "project",
     "license": "MIT",
     "authors": [
