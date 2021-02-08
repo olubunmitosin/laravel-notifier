@@ -3,7 +3,7 @@
     "description": "Simple notification widget for Laravel ^7.0",
     "keywords": ["notification","notify","laravel-package","laravel-notification package","alert"],
     "readme": "README.md",
-    "type": "project",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
