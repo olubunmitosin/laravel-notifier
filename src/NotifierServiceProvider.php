@@ -1,8 +1,14 @@
 <?php
-
+/**
+ * Package of KestyNotifier
+ */
 namespace Kesty\LaravelNotifier;
 
-
+/**
+ * Class NotifierServiceProvider
+ *
+ * @package Kesty\LaravelNotifier
+ */
 class NotifierServiceProvider extends \Illuminate\Support\ServiceProvider {
 
     /**

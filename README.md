@@ -10,7 +10,7 @@ First, pull in the package through Composer.
 composer require kesty/laravel-notifier
 ```
 
-And then include the service provider within `app/config/app.php`. (Skip this step if you are on Laravel 5.5 or above)
+And then include the service provider within `app/config/app.php`. (Skip this step if you are on Laravel 7.5 or above)
 
 ```php
 'providers' => [
@@ -26,12 +26,17 @@ php artisan vendor:publish --provider="Kesty\LaravelNotifier\ServiceProvider"
 -----
 
 ### Controller Usage
-````
+```
 // call the facade class
-use Kesty\LaravelNotifier\KestyNotify;
 
-KestyNotify::message(title, body);
+KestyNotify::info(title, body);
 
 // or as function
-KestyNotify(message, title);
-````
+kestyNotify('Welcome to Laravel', 'Laravel', 'success');
+kestyNotify()->message('Welcome to Laravel', null, 'Laravel');
+```
+
+3. Include  @include('vendor.laravel-notifier.messages') or  @include('vendor.laravel-notifier.notify') somewhere in your template.
+
+You can modify /laravel-notifier/*.css to suit your needs. it's a basic iziToast styles.
+

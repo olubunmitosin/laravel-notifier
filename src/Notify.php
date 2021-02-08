@@ -20,6 +20,20 @@ class Notify {
      */
     protected $levels = [];
 
+    /**
+     * The current position
+     * @var string
+     */
+    protected $position = '';
+
+
+    /**
+     * Available Positions
+     *
+     * @var array
+     */
+    protected $positions = [];
+
 
     /**
      * Construction method.
@@ -29,6 +43,8 @@ class Notify {
     function __construct()
     {
         $this->levels = config('laravel-notifier.levels');
+        $this->positions = config('laravel-notifier.positions');
+        $this->position = config('laravel-notifiers.current-position');
     }
 
     /**
@@ -118,10 +134,15 @@ class Notify {
             $level = $this->levels['default'];
         }
 
+        if (strlen($this->position) < 1) {
+            $this->position = 'center';
+        }
+
         array_push($this->notifiers, [
             'message' => $message,
             'level' => $level,
             'title' => $title,
+            'position' => $this->positions[$this->position]
         ]);
         $this->flash();
 

@@ -1,15 +1,22 @@
 {
     "name": "kesty/laravel-notifier",
     "description": "Simple notification widget for Laravel ^7.0",
+    "keywords": ["notification","notify","laravel-package","laravel-notification package","alert"],
+    "readme": "README.md",
     "type": "project",
     "license": "MIT",
     "authors": [
         {
             "name": "Olubunmi Tosin",
             "email": "olubunmivictor6@gmail.com",
-            "homepage": "http://teqpace.com/victor"
+            "homepage": "http://teqpace.com/victor",
+            "role" : "Developer"
         }
     ],
+    "support": {
+        "wiki": "https://github.com/olubunmitosin/laravel-notifier/wiki",
+        "issues": "https://github.com/olubunmitosin/laravel-notifier/issues"
+    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
@@ -30,7 +37,7 @@
                 "Kesty\\LaravelNotifier\\NotifierServiceProvider"
             ],
             "aliases": {
-                "KestyNotify": "Kesty\\LaravelNotifier\\Facade"
+                "KestyNotify": "Kesty\\LaravelNotifier\\Facade\\Notifier"
             }
         }
     }
