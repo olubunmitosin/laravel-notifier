@@ -1,6 +1,6 @@
 
 # Laravel Notifier
-Reviewer system for laravel 7.*
+Reviewer system for laravel ^7.* : ^8.* : ^9.*
 
 ## Installation
 
