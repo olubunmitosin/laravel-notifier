@@ -38,5 +38,4 @@ return array(
      * Current Position
      */
     'current-position' => 'bottom-center'
-
 );

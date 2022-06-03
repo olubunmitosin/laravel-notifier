@@ -1,7 +1,9 @@
 <?php
 
 namespace Kesty\LaravelNotifier\Facade;
+
 use \Illuminate\Support\Facades\Facade as InternalFacade;
+use Kesty\LaravelNotifier\Notify;
 
 /**
  * Class Notifier
@@ -22,7 +24,7 @@ class Notifier extends InternalFacade {
      */
     protected static function getFacadeAccessor()
     {
-        return 'kestyNotify';
+        return Notify::class;
     }
 
 }

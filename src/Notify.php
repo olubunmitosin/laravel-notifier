@@ -68,10 +68,10 @@ class Notify {
      * Create an info message.
      *
      * @param string $message
-     * @param string $title
+     * @param null $title
      * @return $this
      */
-    public function info($message, $title = null)
+    public function info(string $message, $title = null): Notify
     {
         $this->message($message, $this->levels['info'], $title);
 
@@ -82,10 +82,10 @@ class Notify {
      * Create a success message.
      *
      * @param string $message
-     * @param string $title
+     * @param null $title
      * @return $this
      */
-    public function success($message, $title = null)
+    public function success(string $message, $title = null): Notify
     {
         $this->message($message, $this->levels['success'], $title);
 
@@ -96,10 +96,10 @@ class Notify {
      * Create an error message.
      *
      * @param string $message
-     * @param string $title
+     * @param null $title
      * @return $this
      */
-    public function error($message, $title = null)
+    public function error(string $message, $title = null): Notify
     {
         $this->message($message, $this->levels['error'], $title);
 
@@ -110,10 +110,10 @@ class Notify {
      * Create a warning message.
      *
      * @param string $message
-     * @param string $title
+     * @param null $title
      * @return $this
      */
-    public function warning($message, $title = null)
+    public function warning(string $message, $title = null): Notify
     {
         $this->message($message, $this->levels['warning'], $title);
 
@@ -124,11 +124,11 @@ class Notify {
      * Create a message.
      *
      * @param string $message
-     * @param string $level
-     * @param string $title
+     * @param null $level
+     * @param null $title
      * @return $this
      */
-    public function message($message, $level = null, $title = null)
+    public function message(string $message, $level = null, $title = null): Notify
     {
         if (!isset($level)) {
             $level = $this->levels['default'];
@@ -154,7 +154,7 @@ class Notify {
      *
      * @return $this
      */
-    public function clear()
+    public function clear(): Notify
     {
         $this->notifiers = [];
         $this->flash();

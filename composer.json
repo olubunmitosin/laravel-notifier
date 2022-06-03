@@ -1,10 +1,11 @@
 {
     "name": "kesty/laravel-notifier",
-    "description": "Simple notification widget for Laravel ^7.0",
+    "description": "Simple notification widget for Laravel ^9.0",
     "keywords": ["notification","notify","laravel-package","laravel-notification package","alert"],
     "readme": "README.md",
     "type": "library",
     "license": "MIT",
+    "version": "2.0",
     "authors": [
         {
             "name": "Olubunmi Tosin",
@@ -20,8 +21,8 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=5.5.9",
-        "illuminate/support": "^7.0|^8.0"
+        "php": "^8.0.2",
+        "illuminate/support": "^9.0"
     },
     "autoload": {
         "psr-4": {
