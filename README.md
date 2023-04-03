@@ -33,7 +33,7 @@ php artisan vendor:publish --provider="Kesty\LaravelNotifier\ServiceProvider"
 *Insert the following after the opening of <body> tag of your HTML*
 For default bootstrap alert dev, use the following
 ```
-Include  @include('vendor.laravel-notifier.messages')
+@include('vendor.laravel-notifier.messages')
 ``` 
 
 For Kesty Notify, use the following
