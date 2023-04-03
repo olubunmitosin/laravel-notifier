@@ -1,8 +1,8 @@
 <?php
 
-if (!function_exists('notifier')) {
+if (!function_exists('kNotifier')) {
 
-    function notifier(
+    function kNotifier(
         $message = null,
         $title = null,
         $type = null,
