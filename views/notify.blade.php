@@ -59,12 +59,13 @@
                 default:
                     iziToast.show({
                         id: 'show',
+                        theme: $theme,
                         displayMode: 2,
                         title : $title,
                         icon: $icon,
                         image: $image,
                         balloon: true,
-                        theme: $layout,
+                        layout : $layout,
                         imageWidth: 70,
                         message : $message,
                         position : $position
