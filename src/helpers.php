@@ -11,7 +11,7 @@ if (!function_exists('kestyNotify')) {
         }
 
         if (!is_null($message)) {
-            return $instance->message($message, $type, $title, $icon, $image, $theme, $layout);
+            return $instance->message($message, $title, $type, $icon, $image, $theme, $layout);
         }
 
         return $instance;
