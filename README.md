@@ -1,6 +1,7 @@
 
 # Laravel Notifier
 Notification system for laravel ^7.* : ^8.* : ^9.* : ^10.0
+
 Version 3.0 supports icon, image, layout and theme
 ## Installation
 
