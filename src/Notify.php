@@ -126,9 +126,13 @@ class Notify {
      * @param string $message
      * @param null $level
      * @param null $title
+     * @param null $icon
+     * @param null $image
+     * @param null $theme
+     * @param null $layout
      * @return $this
      */
-    public function message(string $message, $level = null, $title = null): Notify
+    public function message(string $message, $level = null, $title = null, $icon = null, $image = null, $theme = null, $layout = null): Notify
     {
         if (!isset($level)) {
             $level = $this->levels['default'];
@@ -138,14 +142,18 @@ class Notify {
             $this->position = 'center';
         }
 
-        array_push($this->notifiers, [
+        $this->notifiers[] = [
             'message' => $message,
             'level' => $level,
             'title' => $title,
-            'position' => $this->positions[$this->position]
-        ]);
-        $this->flash();
+            'position' => $this->positions[$this->position],
+            'icon' => $icon ?? 'icon-check',
+            'image' => $image ?? '',
+            'theme' => $theme ?? 'light',
+            'layout' => $layout ?? 1
+        ];
 
+        $this->flash();
         return $this;
     }
 

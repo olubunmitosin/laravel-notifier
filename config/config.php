@@ -22,7 +22,7 @@ return array(
      *
      * You can specify an actual position via current-position by entering the position key
      * e.g bottom-right.
-     * By default position is "bottom-center"
+     * By default, position is "bottom-center"
      */
     'positions' => array(
         'bottom-right' => 'bottomRight',

@@ -1,7 +1,7 @@
 
 # Laravel Notifier
-Reviewer system for laravel ^7.* : ^8.* : ^9.*
-
+Notification system for laravel ^7.* : ^8.* : ^9.* : ^10.0
+Version 3.0 supports icon, image, layout and theme
 ## Installation
 
 First, pull in the package through Composer.

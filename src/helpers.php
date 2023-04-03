@@ -2,7 +2,7 @@
 
 if (!function_exists('kestyNotify')) {
 
-    function kestyNotify($message = null, $title = null, $type = null)
+    function kestyNotify($message = null, $title = null, $type = null, $icon = null, $image = null, $theme = null, $layout = null)
     {
         $instance = app('kestyNotify');
 
@@ -11,7 +11,7 @@ if (!function_exists('kestyNotify')) {
         }
 
         if (!is_null($message)) {
-            return $instance->message($message, $type, $title);
+            return $instance->message($message, $type, $title, $icon, $image, $theme, $layout);
         }
 
         return $instance;

@@ -17,8 +17,12 @@
          * @param $message
          * @param $title
          * @param $position
+         * @param $icon
+         * @param $image
+         * @param $theme
+         * @param $layout
          */
-        function showNotification($type, $message, $title, $position) {
+        function showNotification($type, $message, $title, $position, $icon, $image, $theme, $layout) {
             switch($type){
                 case 'success':
                     iziToast.success({
@@ -54,7 +58,14 @@
                     break;
                 default:
                     iziToast.show({
+                        id: 'show',
+                        displayMode: 2,
                         title : $title,
+                        icon: $icon,
+                        image: $image,
+                        balloon: true,
+                        theme: $layout,
+                        imageWidth: 70,
                         message : $message,
                         position : $position
                     });
@@ -63,7 +74,16 @@
             }
         }
         @foreach(session()->get('notifiers') as $notice)
-        showNotification("{{ $notice['level'] }}", "{{ $notice['message'] }}", "{{ $notice['title'] }}","{{ $notice['position'] }}");
+        showNotification(
+            "{{ $notice['level'] }}",
+            "{{ $notice['message'] }}",
+            "{{ $notice['title'] }}",
+            "{{ $notice['position'] }}",
+            "{{ $notice['icon'] }}",
+            "{{ $notice['image'] }}",
+            "{{ $notice['theme'] }}",
+            "{{ $notice['layout'] }}",
+        );
         @endforeach
     </script>
 @endif
