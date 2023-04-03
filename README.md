@@ -48,14 +48,14 @@ KestyNotify::info(title, body);
 ```
 ```
 // or as function
-notifier('Welcome to Laravel', 'Laravel', 'success');
-notifier()->message('Welcome to Laravel', 'Laravel', 'info');
+kNotifier('Welcome to Laravel', 'Laravel', 'success');
+kNotifier()->message('Welcome to Laravel', 'Laravel', 'info');
 ```
 
 Test the beautiful custom version like so
 
 ```
-notifier()->message('Welcome to Laravel', 'Great', null, 'fa-solid fa-check', '/assets/images/avatar.jpg', 'dark', 2);
+kNotifier()->message('Welcome to Laravel', 'Great', null, 'fa-solid fa-check', '/assets/images/avatar.jpg', 'dark', 2);
 ```
 Ensure you have an avatar image and font-awesome icon is loaded.
 You can use any icon of your choice, just check the icon argument to any icon you installed in your project.
