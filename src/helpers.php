@@ -1,6 +1,6 @@
 <?php
 
-if (!function_exists('kestyNotify')) {
+if (!function_exists('notifier')) {
 
     function notifier($message = null, $title = null, $type = null, $icon = null, $image = null, $theme = null, $layout = null)
     {
