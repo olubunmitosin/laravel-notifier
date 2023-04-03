@@ -21,8 +21,10 @@
          * @param $image
          * @param $theme
          * @param $layout
+         * @param $progressBarColor
+         * @param $iconColor
          */
-        function showNotification($type, $message, $title, $position, $icon, $image, $theme, $layout) {
+        function showNotification($type, $message, $title, $position, $icon, $image, $theme, $layout, $progressBarColor, $iconColor) {
             switch($type){
                 case 'success':
                     iziToast.success({
@@ -68,7 +70,9 @@
                         layout : $layout,
                         imageWidth: 70,
                         message : $message,
-                        position : $position
+                        position : $position,
+                        progressBarColor: $progressBarColor,
+                        iconColor: $iconColor
                     });
                     break;
 
@@ -84,6 +88,8 @@
             "{{ $notice['image'] }}",
             "{{ $notice['theme'] }}",
             "{{ $notice['layout'] }}",
+            "{{ $notice['progressBarColor'] }}",
+            "{{ $notice['iconColor'] }}",
         );
         @endforeach
     </script>

@@ -37,5 +37,15 @@ return array(
     /**
      * Current Position
      */
-    'current-position' => 'bottom-center'
+    'current-position' => 'top-right',
+
+    /**
+     * Default Progress Bar Color
+     */
+    'progress-bar-color' => 'rgb(0, 255, 184)',
+
+    /**
+     * Default Icon Color
+     */
+    'icon-color' => 'rgb(0, 255, 184)',
 );

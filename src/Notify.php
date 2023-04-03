@@ -26,6 +26,18 @@ class Notify {
      */
     protected $position = '';
 
+    /**
+     * The default progress bar color
+     * @var string
+     */
+    protected $progressBarColor = '';
+
+
+    /**
+     * The default icon color
+     * @var string
+     */
+    protected $iconColor = '';
 
     /**
      * Available Positions
@@ -45,6 +57,8 @@ class Notify {
         $this->levels = config('laravel-notifier.levels');
         $this->positions = config('laravel-notifier.positions');
         $this->position = config('laravel-notifier.current-position');
+        $this->progressBarColor = config('laravel-notifier.progress-bar-color');
+        $this->iconColor = config('laravel-notifier.icon-color');
     }
 
     /**
@@ -124,15 +138,26 @@ class Notify {
      * Create a message.
      *
      * @param string $message
-     * @param null $level
      * @param null $title
+     * @param null $level
      * @param null $icon
      * @param null $image
      * @param null $theme
      * @param null $layout
+     * @param null $progressBarColor
+     * @param null $iconColor
      * @return $this
      */
-    public function message(string $message, $title = null, $level = null, $icon = null, $image = null, $theme = null, $layout = null): Notify
+    public function message(
+        string $message,
+        $title = null,
+        $level = null,
+        $icon = null,
+        $image = null,
+        $theme = null,
+        $layout = null,
+        $progressBarColor = null,
+        $iconColor = null): Notify
     {
         if (!isset($level)) {
             $level = $this->levels['default'];
@@ -140,6 +165,14 @@ class Notify {
 
         if (strlen($this->position) < 1) {
             $this->position = 'center';
+        }
+
+        if (!isset($progressBarColor)) {
+            $progressBarColor = $this->progressBarColor;
+        }
+
+        if (!isset($iconColor)) {
+            $iconColor = $this->iconColor;
         }
 
         $this->notifiers[] = [
@@ -150,7 +183,9 @@ class Notify {
             'icon' => $icon ?? 'icon-check',
             'image' => $image ?? '',
             'theme' => $theme ?? 'light',
-            'layout' => $layout ?? 2
+            'layout' => $layout ?? 2,
+            'progressBarColor' => $progressBarColor,
+            'iconColor' => $iconColor
         ];
 
         $this->flash();
