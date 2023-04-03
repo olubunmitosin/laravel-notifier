@@ -14,7 +14,7 @@ return array(
         'success' => 'success',
         'error' => 'error',
         'warning' => 'warning',
-        'default' => 'info'
+        'default' => ''
     ),
 
     /**

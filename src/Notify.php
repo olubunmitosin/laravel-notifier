@@ -150,7 +150,7 @@ class Notify {
             'icon' => $icon ?? 'icon-check',
             'image' => $image ?? '',
             'theme' => $theme ?? 'light',
-            'layout' => $layout ?? 1
+            'layout' => $layout ?? 2
         ];
 
         $this->flash();
