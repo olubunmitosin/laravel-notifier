@@ -132,7 +132,7 @@ class Notify {
      * @param null $layout
      * @return $this
      */
-    public function message(string $message, $level = null, $title = null, $icon = null, $image = null, $theme = null, $layout = null): Notify
+    public function message(string $message, $title = null, $level = null, $icon = null, $image = null, $theme = null, $layout = null): Notify
     {
         if (!isset($level)) {
             $level = $this->levels['default'];
