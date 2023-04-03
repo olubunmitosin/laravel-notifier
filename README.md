@@ -33,11 +33,15 @@ php artisan vendor:publish --provider="Kesty\LaravelNotifier\ServiceProvider"
 KestyNotify::info(title, body);
 
 // or as function
-kestyNotify('Welcome to Laravel', 'Laravel', 'success');
-kestyNotify()->message('Welcome to Laravel', null, 'Laravel');
+notifier('Welcome to Laravel', 'Laravel', 'success');
+notifier()->message('Welcome to Laravel', 'Laravel', 'info');
 ```
-
-3. Include  @include('vendor.laravel-notifier.messages') or  @include('vendor.laravel-notifier.notify') somewhere in your template.
+Include  @include('vendor.laravel-notifier.messages')
+``` 
+```
+@include('vendor.laravel-notifier.notify')
+``` 
+somewhere in your template.
 
 You can modify /laravel-notifier/*.css to suit your needs. it's a basic iziToast styles.
 
